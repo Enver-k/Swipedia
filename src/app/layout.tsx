@@ -40,8 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${lora.variable} font-sans antialiased bg-background text-foreground`}>
+    <html lang="en">
+      {/* Apply stable Next font className on body to avoid hydration diffs */}
+      <body className={`${inter.className} ${lora.variable} font-sans antialiased bg-background text-foreground`}>
         <Providers>
           <TopBar />
           <main className="pt-14 pb-20 min-h-screen">
