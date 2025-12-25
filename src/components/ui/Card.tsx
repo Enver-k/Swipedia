@@ -13,10 +13,10 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          'rounded-2xl bg-white dark:bg-gray-900',
+          'rounded-xl bg-white dark:bg-slate-900',
           {
-            'border border-gray-200 dark:border-gray-800': variant === 'default',
-            'shadow-xl shadow-gray-200/50 dark:shadow-black/20': variant === 'elevated',
+            'border border-slate-200 dark:border-slate-800 shadow-soft': variant === 'default',
+            'shadow-lift': variant === 'elevated',
           },
           className
         )}

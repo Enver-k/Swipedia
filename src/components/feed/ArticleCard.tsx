@@ -27,14 +27,14 @@ function ArticleCard({ article, className }: ArticleCardProps) {
   return (
     <div
       className={cn(
-        'w-full max-w-md mx-auto rounded-2xl bg-white dark:bg-gray-900',
+        'w-full max-w-lg mx-auto rounded-2xl bg-white dark:bg-slate-900',
         'shadow-xl shadow-gray-200/50 dark:shadow-black/30',
         'overflow-hidden select-none',
         className
       )}
     >
       {/* Image or gradient header */}
-      <div className="relative h-48 overflow-hidden pointer-events-none">
+      <div className="relative h-64 overflow-hidden pointer-events-none">
         {thumbnail ? (
           <img
             src={thumbnail.url}
@@ -50,7 +50,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
               gradient
             )}
           >
-            <span className="text-6xl font-bold text-white/80">
+            <span className="text-7xl font-bold text-white/80">
               {title.charAt(0).toUpperCase()}
             </span>
           </div>
@@ -75,14 +75,14 @@ function ArticleCard({ article, className }: ArticleCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-5 space-y-3">
+      <div className="p-6 space-y-4">
         {/* Title */}
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
           {title}
         </h2>
 
         {/* Summary */}
-        <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-5">
+        <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-6">
           {extract}
         </p>
       </div>
